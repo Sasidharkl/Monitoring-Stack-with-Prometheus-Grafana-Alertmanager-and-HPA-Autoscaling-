@@ -1,0 +1,7 @@
+To test:
+
+Increase CPU usage using the stress app.
+
+Monitor scaling with:
+
+kubectl get hpa -w
