@@ -1,0 +1,17 @@
+                  +---------------------------+
+                  |      Grafana              |
+                  | (Visualize metrics from)  |
+                  +-----------+---------------+
+                              |
+                              v
++------------+     +---------+---------+     +---------------------+
+| Kubernetes | --> |    Prometheus     | --> |   Alertmanager      |
+|  Metrics   |     | (scrapes & stores)|     | (sends alerts via   |
+|  (via KSM) |     +---------+---------+     | Email/Slack/Webhook)|
++------------+               |               +---------------------+
+                             v
+                   +--------------------+
+                   | Horizontal Pod     |
+                   | Autoscaler (HPA)   |
+                   | (based on metrics) |
+                   +--------------------+
