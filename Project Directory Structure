@@ -1,0 +1,20 @@
+monitoring-stack/
+│
+├── kube-state-metrics/
+│   └── deployment.yaml
+├── prometheus/
+│   ├── config-map.yaml
+│   ├── prometheus-deployment.yaml
+│   └── service.yaml
+├── grafana/
+│   ├── config-map.yaml
+│   ├── grafana-deployment.yaml
+│   └── service.yaml
+├── alertmanager/
+│   ├── config-map.yaml
+│   ├── alertmanager-deployment.yaml
+│   └── service.yaml
+├── hpa/
+│   └── hpa.yaml
+└── target-app/
+    └── deployment.yaml
