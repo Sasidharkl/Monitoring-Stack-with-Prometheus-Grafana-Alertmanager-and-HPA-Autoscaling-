@@ -1,0 +1,8 @@
+Prometheus (monitoring)
+
+Grafana (visualization)
+
+Alertmanager (alerting)
+
+Kubernetes HPA (autoscaling based on CPU)
+
