@@ -1,0 +1,6 @@
+kubectl apply -f kube-state-metrics/deployment.yaml
+kubectl apply -f prometheus/
+kubectl apply -f grafana/
+kubectl apply -f alertmanager/
+kubectl apply -f target-app/deployment.yaml
+kubectl apply -f hpa/hpa.yaml
