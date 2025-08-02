@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpu-stress-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpu-stress
+  template:
+    metadata:
+      labels:
+        app: cpu-stress
+    spec:
+      containers:
+      - name: stress-ng
+        image: progrium/stress
+        args: ["--cpu", "1"]
+        resources:
+          limits:
+            cpu: "500m"
+          requests:
+            cpu: "200m"
