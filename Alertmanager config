@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+data:
+  alertmanager.yml: |
+    global:
+      resolve_timeout: 1m
+
+    route:
+      receiver: 'default'
+
+    receivers:
+    - name: 'default'
+      email_configs:
+      - to: 'you@example.com'
+        from: 'alertmanager@example.com'
+        smarthost: 'smtp.example.com:587'
+        auth_username: 'alertmanager@example.com'
+        auth_password: 'yourpassword'
